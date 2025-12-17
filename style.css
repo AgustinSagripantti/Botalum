@@ -360,9 +360,7 @@ body{
     margin-top: 2rem;
 }
 
-.text-light-blue {
-    color: #00a8ff; 
-}
+
 
 .text-outline {
     font-weight: 400; 
@@ -415,11 +413,14 @@ body{
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+
 .prueba{
 
     height: 100vh;
 }
 
+/*FOOTER*/
 .bg-dark-blue {
     background-color: #050a14;
 }
@@ -465,7 +466,6 @@ body{
     }
     .footer-section .col-md-4 {
         text-align: center !important;
-        padding-left: 0 !important;
     }
 }
 
@@ -473,4 +473,8 @@ body{
     .ps-md-5 {
         padding-left: 3rem !important;
     }
+}
+
+.text-light-blue {
+    color: #00a8ff !important; 
 }
