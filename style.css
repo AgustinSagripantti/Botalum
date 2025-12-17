@@ -353,6 +353,72 @@ body{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
+/* --- MODERNIZACIÓN DEL HEADER (RESPONSIVE) --- */
+
+.main-title {
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-top: 2rem;
+}
+
+.text-light-blue {
+    color: #00a8ff; /* Un azul cian muy suave solo para el detalle */
+}
+
+.text-outline {
+    font-weight: 400; /* Más fino para contrastar con el fw-bold */
+    opacity: 0.9;
+}
+
+.tracking-widest {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+}
+
+/* BOTONES */
+.btn-hero-primary {
+    background-color: #00478a;
+    color: white !important;
+    border: 2px solid #00478a;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 71, 138, 0.3);
+}
+
+.btn-hero-outline {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+.btn-hero-primary:hover {
+    background-color: #003566; /* Un poco más oscuro */
+    border-color: #003566;
+    transform: translateY(-5px); /* Se eleva al pasar el mouse */
+    box-shadow: 0 15px 30px rgba(0, 71, 138, 0.4);
+    color: white;
+}
+
+.btn-hero-outline:hover {
+    background: white;
+    color: #00478a !important;
+    transform: translateY(-5px);
+}
+/* Animación de Entrada */
+.fade-in-up {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .prueba{
 
     height: 100vh;
