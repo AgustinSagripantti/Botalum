@@ -1,6 +1,6 @@
-// MENU
 document.addEventListener('DOMContentLoaded', function () {
 
+    // MENU
     const navbar = document.getElementById('mainNav');
     const logoImg = document.querySelector('.logo-img');
 
@@ -76,4 +76,17 @@ document.addEventListener('DOMContentLoaded', function () {
             menuToggler.click(); 
         });
     }
+
+//VIDEO
+const video = document.querySelector('.hero-video');
+
+if (video) {
+    video.addEventListener('timeupdate', function() {
+        if (this.currentTime >= 27) {
+            this.currentTime = 0;
+            this.play();
+        }
+    }, false);
+}
 });
+
