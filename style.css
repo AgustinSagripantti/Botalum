@@ -415,11 +415,40 @@ body{
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* --- SECCIÓN PRODUCTO --- */
 
+.tracking-wider {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
 
-.prueba{
+/* Efecto para las imágenes */
+.img-wrapper {
+    overflow: hidden;
+    border-radius: 1rem;
+}
 
-    height: 100vh;
+.img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.05); /* Zoom suave al pasar el mouse */
+}
+
+/* Colores de Botalum */
+.text-primary {
+    color: #00478a !important;
+}
+
+/* Responsive: Ajustes de espaciado */
+@media (max-width: 767.98px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+    .img-wrapper {
+        margin-bottom: 20px;
+    }
 }
 
 /*VIDEO*/
@@ -468,7 +497,7 @@ body{
 }
 
 .footer-socials i {
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -495,3 +524,43 @@ body{
     }
 }
 
+
+.benefits-wrapper {
+    transition: transform 0.4s ease;   
+}
+
+@media (max-width: 767.98px) {
+    .benefits-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.btn-calculadora {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #00478a; 
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 71, 138, 0.15);
+}
+
+.btn-calculadora:hover {
+    background-color: #003566;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 71, 138, 0.25);
+    letter-spacing: 1px; 
+}
+
+
+@media (max-width: 576px) {
+    .btn-calculadora {
+        width: 90%;
+        padding: 16px 20px;
+    }
+}
