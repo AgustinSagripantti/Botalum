@@ -415,39 +415,41 @@ body{
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- SECCIÓN PRODUCTO --- */
 
-.tracking-wider {
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-}
+/*BARRALES*/
+.tracking-widest { letter-spacing: 3px; }
 
-/* Efecto para las imágenes */
-.img-wrapper {
-    overflow: hidden;
-    border-radius: 1rem;
-}
+.border-primary { border-color: #00478a !important; }
 
-.img-wrapper img {
-    transition: transform 0.5s ease;
-}
-
-.img-wrapper:hover img {
-    transform: scale(1.05); /* Zoom suave al pasar el mouse */
-}
-
-/* Colores de Botalum */
-.text-primary {
-    color: #00478a !important;
-}
-
-/* Responsive: Ajustes de espaciado */
-@media (max-width: 767.98px) {
-    .display-5 {
-        font-size: 2rem;
+@media (max-width: 991.98px) {
+    .text-end {
+        text-align: left !important;
     }
-    .img-wrapper {
-        margin-bottom: 20px;
+    .border-end {
+        border-right: none !important;
+        border-left: 4px solid #00478a !important;
+        border-radius: 0 8px 8px 0 !important;
+    }
+}
+
+.border-end-custom {
+    border-left: 4px solid #00478a !important; 
+}
+
+.rounded-start-custom {
+    border-radius: 0 8px 8px 0 !important; 
+}
+
+@media (min-width: 992px) {
+    .border-end-custom {
+        border-left: none !important;
+        border-right: 4px solid #00478a !important; 
+    }
+    .rounded-start-custom {
+        border-radius: 8px 0 0 8px !important; 
+    }
+    .text-lg-end {
+        text-align: right !important; 
     }
 }
 
