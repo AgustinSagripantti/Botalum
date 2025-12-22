@@ -5,8 +5,8 @@ body{
 
 /*MENU*/
 #mainNav {
-    transition: background-color 1s ease, box-shadow 1s ease;
-    transition: 1s; 
+    transition: background-color 0.5 ease, box-shadow 0.5s ease;
+    transition: 0.5s; 
     padding-top: 30px;
 }
 
@@ -22,7 +22,7 @@ body{
 #mainNav.navbar-scrolled {
     background-color: #ffffff !important; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    transition: 1s;
+    transition: 0.5s;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -615,3 +615,134 @@ hr {
         padding: 16px 20px;
     }
 }
+
+/*BANNER SUBPÁGINAS*/
+
+.nosotros-hero {
+    height: 50vh; 
+    min-height: 350px;
+
+    background-image: url('media/banner_secundario.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 71, 138, 0.8), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: white;
+    content: "/";
+}
+
+@media (max-width: 767.98px) {
+    .nosotros-hero {
+        height: 40vh;
+        text-align: center;
+    }
+    .breadcrumb {
+        justify-content: center;
+    }
+}
+
+.nosotros-hero h1 {
+    animation: fadeInUp 1s ease-out forwards; /* 0.3s de retraso */
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ESTILO SECCIÓN HISTORIA --- */
+
+.photo-frame-decorator {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00478a;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background-color: #00478a;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 3;
+    text-align: center;
+    min-width: 120px;
+}
+
+.story-content p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.z-index-2 { z-index: 2; }
+
+.nosotros-history-section {
+    padding-top: 100px !important; /* Espacio extra arriba */
+    padding-bottom: 80px !important;
+    position: relative;
+}
+
+/* Opcional: Una sutil sombra interna en la parte superior para dar profundidad */
+.nosotros-history-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.03), transparent);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 767.98px) {
+    .nosotros-history-section {
+        padding-top: 60px !important;
+    }
+}
+
+/* Ajuste para que el badge no tape tanto en móvil */
+@media (max-width: 767.98px) {
+    .photo-frame-decorator {
+        display: none;
+    }
+    .experience-badge {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px;
+    }
+}
+
+strong {
+    font-weight: 700 !important; /* El máximo grosor */
+    color: #000; /* O podés usar el azul #00478a si preferís que los nombres resalten en azul */
+}
+

@@ -35,13 +35,13 @@
             
             <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Barrales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    <a class="nav-link active" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item separator-line">
                     <a class="nav-link" href="#">Contacto</a>
@@ -81,134 +81,56 @@
 </nav>
 
 <!--BANNER-->
-<header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
-    <div class="container py-5 fade-in-up"> 
-        
-        <p class="text-uppercase fw-semibold mb-2 tracking-widest text-light-blue fs-7 fs-md-6 aja">
-            mayor ancho de labor, mayor productividad
-        </p>
-        
-        <h1 class="display-4 display-md-2 fw-bold mb-4 mb-md-5 main-title">
-            LA INVERSIÓN JUSTA <br class="d-none d-md-block">
-            <span class="text-outline">PARA LLEGAR MÁS LEJOS</span>
-        </h1>
-        
-        <div class="d-grid d-md-flex justify-content-md-center gap-4 gap-md-5">
-            <a href="#" class="btn btn-hero-primary px-5 py-3 text-uppercase fw-bold">
-                Calcular Beneficios
-            </a>
-            <a href="#barrales_inicio" class="btn btn-hero-outline px-5 py-3 text-uppercase fw-bold">
-                Ver Barrales
-            </a>
-        </div>
-        
-    </div>
-</header>
-
-<!--BARRALES-->
-<section class="py-lg-7 py-5 bg-white" id="barrales_inicio">
-    <div class="container">
-        <div class="text-center mb-5 pb-lg-5">
-            <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-2">Barrales Botalum</h6>
-            <h2 class="display-5 fw-bold" style="color: #00478a;">El estándar de la pulverización moderna</h2>
-        </div>
-
-        <div class="row align-items-center mb-5 pb-lg-5 gy-4">
-            <div class="col-lg-5 order-1">
-                <div class="p-4 border-start border-4 border-primary bg-light rounded-end shadow-sm">
-                    <h3 class="h4 fw-bold mb-3" style="color: #00478a;">Compatibilidad Universal</h3>
-                    <p class="text-muted mb-3"><strong>Fácil instalación sin modificaciones en todos los equipos y modelos.</strong></p>
-                    <p class="text-secondary small mb-0">
-                        Diseñados para ser instalados en todos los modelos y marcas de pulverizadoras, tanto usadas como nuevas. 
-                        Nuestro novedoso <strong>sistema de encastre</strong> permite variar el ancho y reemplazar partes rápidamente sin necesidad de soldaduras.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-7 ps-lg-5 order-2">
-                <div class="image-frame text-center">
-                    <img src="media/barral-render-1.png" alt="Tecnología Botalum" class="img-fluid floating-img" style="max-height: 350px;">
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center mt-lg-5 gy-4">
-            <div class="col-lg-7 pe-lg-5 order-2 order-lg-1">
-                <div class="image-frame text-center">
-                    <img src="media/barral-render-2.png" alt="Ancho de labor Botalum" class="img-fluid floating-img-delayed" style="max-height: 350px;">
-                </div>
-            </div>
-            <div class="col-lg-5 order-1 order-lg-2">
-                <div class="p-4 border-end-custom border-primary bg-light rounded-start-custom shadow-sm text-lg-end">
-                    <h3 class="h4 fw-bold mb-3" style="color: #00478a;">Máximo Ancho de Labor</h3>
-                    <p class="text-muted mb-3"><strong>Hasta 40 metros con 50% menos de peso.</strong></p>
-                    <p class="text-secondary small mb-0">
-                        Logran un comportamiento dinámico superior al hierro, con una reducción de fatiga de la máquina y mejor estabilidad en giros de cabecera. El menor peso del aluminio permite extender la longitud de pulverizado, logrando un mayor área de trabajo en menor tiempo, con ahorro de combustible y reduciendo el pisado del sembrado.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--VIDEO-->
-<section class="video-container">
-    <video autoplay muted loop playsinline poster="media/miniatura_video_inicio.jpg" class="hero-video">
-        <source src="media/video_inicio.mp4#t=0,27" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
+<section class="nosotros-hero d-flex align-items-center position-relative">
+    <div class="hero-overlay"></div>
     
-    <div class="video-overlay"></div>
-</section>
-
-<!--BENEFICIOS-->
-<section class="benefits-section py-5">
-    <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-4" style="color: #00478a;">BENEFICIOS</h2>
-        
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="benefits-wrapper rounded-4 overflow-hidden mb-5">
-                    <img src="media/imagen_beneficios.png" alt="Beneficios Botalum" class="img-fluid w-100 d-block">
-                </div>
-        <div class="text-center mt-5">
-    <a href="calculadora.html" class="btn-calculadora">
-        <i class="me-2"></i>
-        Calcular Beneficios
-    </a>
-    </div>
+    <div class="container position-relative z-index-2">
+        <div class="row">
+            <div class="col-lg-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white opacity-75 text-decoration-none">Inicio</a></li>
+                        <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Nosotros</li>
+                    </ol>
+                </nav>
+                <h1 class="display-3 fw-bold text-white mb-3">¿Quiénes Somos?</h1>
             </div>
         </div>
     </div>
 </section>
 
-<!--QUE ES BOTALUM?-->
-<section class="py-5 bg-white border-top">
-    <div class="container py-md-5">
+<section class="py-6 bg-white overflow-hidden nosotros-history-section">
+    <div class="container">
         <div class="row align-items-center gy-5">
             
-            <div class="col-md-6 pe-lg-5">
-               
-                <h2 class="display-5 fw-bold mb-4" style="color: #00478a;">¿Qué es BOTALUM?</h2>
-                <p class="lead text-muted mb-4">
-                    Botalum nace de la experiencia acumulada por la familia Campagnaro, pioneros en el desarrollo de la pulverización automotriz en Argentina. Bajo la tutoría y el ingenio de Orfelio Campagnaro, desarrollamos el exclusivo 'Sistema Botalum': una ingeniería que permite construir barrales más livianos que el acero, con materiales de alta resistencia que aumentan significativamente el rendimiento operativo de cualquier pulverizadora del mercado.
-                    Hoy, somos un equipo de profesionales dedicados a la investigación, producción y exportación, comprometidos con brindar un producto de máxima calidad que revoluciona la labor del productor en toda la región.
-                </p>
-                <a href="nosotros.html" class="btn-conocenos">
-                    Conocenos más <i class="bi bi-arrow-right ms-2"></i>
-                </a>
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="position-relative">
+                    <div class="photo-frame-decorator"></div>
+                    <img src="media/foto-nosotros.jpg" alt="Pioneros Botalum" class="img-fluid rounded-4 shadow-lg position-relative z-index-2">
+                    
+                    <div class="experience-badge shadow-lg">
+                        <span class="d-block h4 fw-bold mb-0 text-white">10+</span>
+                        <span class="small text-white opacity-75">Años de Innovación</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="map-container shadow-lg rounded-4 overflow-hidden">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6694.388155956242!2d-60.67993522030424!3d-32.97228108618558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ac801f60f839%3A0x6f220360571577f0!2sUruguay%203245%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1766087476345!5m2!1ses!2sar" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            <div class="col-lg-6 ps-lg-5 order-1 order-lg-2">
+                <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-2">Nuestro Legado</h6>
+                <h2 class="display-5 fw-bold mb-4" style="color: #00478a;">Pioneros de la Industria</h2>
+                
+                <div class="story-content">
+                    <p class="lead text-secondary mb-4">
+                        La historia de Botalum comienza en Pavón Arriba, en el seno de Campagnaro Hnos., donde <strong>Fernando Campagnaro</strong> —impulsado por la inquietud de mejorar la performance de los equipos— decidió desafiar los estándares convencionales.
+                    </p>
+                    
+                    <p class="text-muted mb-4">
+                        Con la experiencia de <strong>Orfelio</strong>, reconocido pionero en la creación de la primera pulverizadora automotriz de cuatro ruedas, la familia logró materializar una innovación sin precedentes. Tras rigurosas pruebas a campo y la colaboración del <strong>Ing. Esteban Ribotta</strong>, el proyecto escaló hasta convertirse en una realidad global.
+                    </p>
+
+                    <p class="text-muted">
+                        Lo que comenzó como una invención familiar, hoy es una firma consolidada que exporta tecnología a países como Bolivia y Uruguay, impulsados por la eficiencia y la mejora continua.
+                    </p>
                 </div>
             </div>
 
