@@ -1046,3 +1046,237 @@ strong {
 .custom-faq .dept-icon {
     font-size: 1.2rem;
 }
+
+/*AUDIOS*/
+.testimonial-premium-card {
+    border: none;
+    background: #fff;
+    min-height: 400px;
+}
+
+.img-full-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 300px;
+}
+
+.location-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 71, 138, 0.9);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    backdrop-filter: blur(5px);
+    z-index: 5;
+}
+
+.player-wrapper {
+    background: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.play-main-btn {
+    width: 60px;
+    height: 60px;
+    background: #00478a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 71, 138, 0.3);
+}
+
+.play-main-btn:hover {
+    transform: scale(1.1);
+    background: #00b4d8;
+}
+
+.equalizer {
+    height: 30px;
+    gap: 4px;
+}
+.bar {
+    width: 4px;
+    background: #00478a;
+    border-radius: 10px;
+    height: 5px;
+    transition: height 0.2s;
+}
+
+.playing .bar {
+    animation: eq 0.6s infinite alternate;
+}
+
+.playing .bar:nth-child(2) { animation-delay: 0.1s; }
+.playing .bar:nth-child(3) { animation-delay: 0.2s; }
+
+
+@keyframes eq {
+    0% { height: 5px; }
+    100% { height: 25px; }
+}
+
+.thumb-user {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+.thumb-user.active {
+    border-color: #00478a;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+#testimonialCarousel {
+    padding-bottom: 60px;
+}
+
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.img-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%);
+    z-index: 1;
+}
+
+
+@media (max-width: 767.98px) {
+    .img-gradient-overlay {
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%);
+    }
+}
+
+.img-full-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1); 
+    transition: transform 0.5s ease;
+}
+
+.testimonial-premium-card:hover .img-full-card {
+    transform: scale(1.05); 
+}
+
+.audio-intro-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 71, 138, 0.05);
+    color: #00478a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0, 71, 138, 0.1);
+}
+
+.divider-center {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #00478a, #00b4d8);
+    border-radius: 2px;
+}
+
+.tracking-widest {
+    letter-spacing: 3px;
+}
+
+@media (max-width: 767.98px) {
+    .img-gradient-overlay {
+        /* En móvil suavizamos el degradado para que no ensucie la foto */
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%);
+    }
+    
+    .location-tag {
+        /* Bajamos un poco el tamaño en móviles para que no estorbe */
+        bottom: 15px;
+        left: 15px;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
+
+/*GALERÍA*/
+.brand-machine-card {
+    height: 300px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.brand-machine-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.brand-machine-card:hover img {
+    transform: scale(1.1);
+}
+
+.brand-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 43, 84, 0.9), transparent);
+    color: white;
+    z-index: 2;
+}
+
+.machine-name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.botalum-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00b4d8;
+    font-weight: 600;
+}
+
+.brand-machine-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+

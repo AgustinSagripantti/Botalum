@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botalum - Nosotros</title>
+    <title>Botalum - Testimonios</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,10 +41,10 @@
                     <a class="nav-link" href="barrales.html">Barrales</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="testimonios.html">Testimonios</a>
+                    <a class="nav-link active" href="testimonios.html">Testimonios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item separator-line">
                     <a class="nav-link" href="contacto.html">Contacto</a>
@@ -93,165 +93,155 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-2">
                         <li class="breadcrumb-item"><a href="index.html" class="text-white opacity-75 text-decoration-none">Inicio</a></li>
-                        <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Nosotros</li>
+                        <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Testimonios</li>
                     </ol>
                 </nav>
-                <h1 class="display-3 fw-bold text-white mb-3">¿Quiénes Somos?</h1>
+                <h1 class="display-3 fw-bold text-white mb-3">Experiencias Botalum</h1>
             </div>
         </div>
     </div>
 </section>
 
-<!--PIONEROS-->
-<section class="py-5 bg-white overflow-hidden nosotros-history-section">
+<!--AUDIOS-->
+<section class="py-5 bg-white">
     <div class="container">
-        <div class="row align-items-center gy-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <div class="audio-intro-icon mb-3">
+                    <i class="bi bi-mic-fill"></i>
+                </div>
+                
+                <h2 class="display-5 fw-bold text-dark-blue mb-3">La palabra de nuestros clientes</h2>
+                
+                <div class="divider-center mx-auto mb-4"></div>
+                
+                <p class="lead text-secondary px-md-5">
+                    Queremos agradecer profundamente a los productores y contratistas por compartir su experiencia.
+                </p>
+                
+                <p class="text-primary fw-bold small text-uppercase tracking-widest mt-4">
+                    <i class="bi bi-headphones me-2"></i> Haga clic en el play para escuchar los audios
+                </p>
+            </div>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="false">
             
-            <div class="col-lg-6 order-2 order-lg-1">
-                <div class="position-relative">
-                    <div class="photo-frame-decorator"></div>
-                    <img src="media/foto-nosotros.jpg" alt="Pioneros Botalum" class="img-fluid rounded-4 shadow-lg position-relative z-index-2">
-                    
-                    <div class="experience-badge shadow-lg">
-                        <span class="d-block h4 fw-bold mb-0 text-white">10+</span>
-                        <span class="small text-white opacity-75">Años de Innovación</span>
+            <div class="carousel-indicators" style="bottom: -50px;">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-primary" aria-current="true"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-primary"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-primary"></button>
+            </div>
+
+            <div class="carousel-inner shadow-lg rounded-5">
+                
+                <div class="carousel-item active">
+                    <div class="row g-0 testimonial-premium-card">
+                    <div class="col-md-5 position-relative overflow-hidden">
+                        <div class="img-gradient-overlay"></div> <img src="media/fundadores.png" class="img-full-card" alt="Ricardo">
+                        <div class="location-tag"><i class="bi bi-geo-alt-fill"></i> Pergamino, Bs.As.</div>
+                    </div>
+                        <div class="col-md-7 p-4 p-md-5 bg-white d-flex flex-column justify-content-center">
+                            <i class="bi bi-quote text-primary opacity-25 display-1 mb-0"></i>
+                            <h3 class="fw-bold mb-1">Ricardo Rossi</h3>
+                            <p class="text-primary fw-bold mb-4">Contratista Rural</p>
+                            <p class="text-secondary fs-5 italic mb-4">"La estabilidad que ganamos con los 40 metros es impresionante, no se comparan con nada."</p>
+                            <div class="player-wrapper p-3 rounded-pill d-flex align-items-center">
+                                <audio class="testimonial-audio" src="media/audio.mp3"></audio>
+                                <button class="play-main-btn" onclick="togglePlay(this)"><i class="bi bi-play-fill"></i></button>
+                                <div class="equalizer ms-3 d-flex align-items-end">
+                                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row g-0 testimonial-premium-card">
+                        <div class="col-md-5 position-relative overflow-hidden">
+                            <div class="img-gradient-overlay"></div> <img src="media/fundadores.png" class="img-full-card" alt="Ricardo">
+                            <div class="location-tag"><i class="bi bi-geo-alt-fill"></i> Pergamino, Bs.As.</div>
+                        </div>
+                        <div class="col-md-7 p-4 p-md-5 bg-white d-flex flex-column justify-content-center">
+                            <i class="bi bi-quote text-primary opacity-25 display-1 mb-0"></i>
+                            <h3 class="fw-bold mb-1">Juan Garcia</h3>
+                            <p class="text-primary fw-bold mb-4">Productor Agrícola</p>
+                            <p class="text-secondary fs-5 italic mb-4">"El ahorro de combustible en una campaña de 5000 hectáreas paga la inversión sola."</p>
+                            <div class="player-wrapper p-3 rounded-pill d-flex align-items-center">
+                                <audio class="testimonial-audio" src="media/audio.mp3"></audio>
+                                <button class="play-main-btn" onclick="togglePlay(this)"><i class="bi bi-play-fill"></i></button>
+                                <div class="equalizer ms-3 d-flex align-items-end">
+                                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-6 ps-lg-5 order-1 order-lg-2">
-                <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-2">Nuestro Legado</h6>
-                <h2 class="display-5 fw-bold mb-4" style="color: #00478a;">Pioneros de la Industria</h2>
-                
-                <div class="story-content">
-                    <p class="lead text-secondary mb-4">
-                        La historia de Botalum comienza en Pavón Arriba, en el seno de Campagnaro Hnos, donde <strong>Fernando Campagnaro</strong> —impulsado por la inquietud de mejorar la performance de los equipos— decidió desafiar los estándares convencionales.
-                    </p>
-                    
-                    <p class="text-muted mb-4">
-                        Con la experiencia de <strong>Orfelio</strong>, reconocido pionero en la creación de la primera pulverizadora automotriz de cuatro ruedas, la familia logró materializar una innovación sin precedentes. Tras rigurosas pruebas a campo y la colaboración del <strong>Ing. Esteban Ribotta</strong>, el proyecto escaló hasta convertirse en una realidad global.
-                    </p>
-
-                    <p class="text-muted">
-                        Lo que comenzó como una invención familiar, hoy es una firma consolidada que exporta tecnología a países como Bolivia y Uruguay, impulsados por la eficiencia y la mejora continua.
-                    </p>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
 
-<!--FUNDADORES-->
-<section class="py-5 bg-light">
+<!--GALERIA-->
+<section class="py-5 bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold" style="color: #00478a;">Fundadores</h2>
-            <div class="divider-center mx-auto mt-3"></div>
+            <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-2">Compatibilidad comprobada</h6>
+            <h2 class="display-5 fw-bold" style="color: #00478a;">Botalum en las grandes marcas</h2>
+            <p class="text-secondary">Nuestra tecnología de aluminio equipando a los referentes del sector.</p>
         </div>
 
         <div class="row g-4">
-            <div class="col-lg-3 col-sm-6">
-                <div class="founder-item">
-                    <div class="founder-image-container">
-                        <img src="media/fundadores.png" alt="Fernando Campagnaro" class="img-fluid">
-                        <div class="founder-info-overlay">
-                            <h4 class="h5 fw-bold mb-0">Fernando Campagnaro</h4>
-                            <span class="small opacity-75">Venta de Barrales Nuevos</span>
-                        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="brand-machine-card shadow-sm rounded-4 overflow-hidden position-relative">
+                    <img src="media/galeria.jpg" alt="Botalum en Metalfor" class="img-fluid w-100">
+                    <div class="brand-label">
+                        <span class="machine-name">METALFOR</span>
+                        <span class="botalum-tag">Equipada con Botalum</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6">
-                <div class="founder-item">
-                    <div class="founder-image-container">
-                        <img src="media/fundadores.png" alt="Esteban Ribotta" class="img-fluid">
-                        <div class="founder-info-overlay">
-                            <h4 class="h5 fw-bold mb-0">Esteban Ribotta</h4>
-                            <span class="small opacity-75">Fabricantes y Comercio Exterior</span>
-                        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="brand-machine-card shadow-sm rounded-4 overflow-hidden position-relative">
+                    <img src="media/galeria.jpg" alt="Botalum en Roja" class="img-fluid w-100">
+                    <div class="brand-label">
+                        <span class="machine-name">ROJA</span>
+                        <span class="botalum-tag">Equipada con Botalum</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6">
-                <div class="founder-item">
-                    <div class="founder-image-container">
-                        <img src="media/fundadores.png" alt="Hector García" class="img-fluid">
-                        <div class="founder-info-overlay">
-                            <h4 class="h5 fw-bold mb-0">Hector García</h4>
-                            <span class="small opacity-75">Venta de Repuestos</span>
-                        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="brand-machine-card shadow-sm rounded-4 overflow-hidden position-relative">
+                    <img src="media/galeria.jpg" alt="Botalum en MBU" class="img-fluid w-100">
+                    <div class="brand-label">
+                        <span class="machine-name">MBU</span>
+                        <span class="botalum-tag">Equipada con Botalum</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6">
-                <div class="founder-item">
-                    <div class="founder-image-container">
-                        <img src="media/fundadores.png" alt="Marcos Pratti" class="img-fluid">
-                        <div class="founder-info-overlay">
-                            <h4 class="h5 fw-bold mb-0">Marcos Pratti</h4>
-                            <span class="small opacity-75">Venta de Barrales Nuevos</span>
-                        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="brand-machine-card shadow-sm rounded-4 overflow-hidden position-relative">
+                    <img src="media/galeria.jpg" alt="Botalum en UL16" class="img-fluid w-100">
+                    <div class="brand-label">
+                        <span class="machine-name">UL16</span>
+                        <span class="botalum-tag">Equipada con Botalum</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!--POLITICA DE GESTION-->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="policy-card p-4 p-md-5 rounded-4 border shadow-sm d-md-flex align-items-center">
-                    
-                    <div class="policy-icon mb-4 mb-md-0 me-md-5">
-                        <i class="bi bi-file-earmark-check-fill"></i>
+            <div class="col-lg-4 col-md-6">
+                <div class="brand-machine-card shadow-sm rounded-4 overflow-hidden position-relative">
+                    <img src="media/galeria.jpg" alt="Botalum en PLA" class="img-fluid w-100">
+                    <div class="brand-label">
+                        <span class="machine-name">PLA</span>
+                        <span class="botalum-tag">Equipada con Botalum</span>
                     </div>
-
-                    <div class="policy-text flex-grow-1">
-                        <h2 class="h3 fw-bold mb-3" style="color: #00478a;">Política de Gestión</h2>
-                        <p class="text-secondary mb-4 mb-md-0 pe-lg-4">
-                            Promovemos el sostenimiento de nuestra organización a través de una gestión 
-                            orientada al mejoramiento continuo de la calidad en la fabricación y servicio posventa 
-                            de barrales y accesorios para el agro.
-                        </p>
-                    </div>
-
-                    <div class="policy-action">
-                        <a href="media/botalum-politica-gestion.pdf" target="_blank" class="btn-download-pdf">
-                            <i class="bi bi-download me-2"></i> Descargar PDF
-                        </a>
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!--FOTO GRUPAL-->
-<section class="pb-5 bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="group-photo-container position-relative overflow-hidden rounded-4 shadow-lg">
-                    <img src="media/foto-grupal.jpg" alt="Equipo Botalum" class="img-fluid w-100 d-block">
-                    
-                    <div class="photo-caption p-4 text-center">
-                        <p class="h4 fw-light text-white mb-0 italic">"Equipo Botalum"</p>
-                    </div>
-                </div>
-                
-                <div class="mt-5 text-center">
-                    <div class="divider-center mx-auto mb-4"></div>
-                    <p class="text-muted small text-uppercase tracking-widest">Botalum - Desde Pavón Arriba al mundo</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -333,5 +323,43 @@
         crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
+<script>
+    function togglePlay(btn) {
+    const wrapper = btn.closest('.player-wrapper');
+    const audio = wrapper.querySelector('.testimonial-audio');
+    const icon = btn.querySelector('i');
+
+    if (audio.paused) {
+        stopAllAudios();
+        audio.play();
+        icon.className = 'bi bi-pause-fill';
+        wrapper.classList.add('playing');
+    } else {
+        audio.pause();
+        icon.className = 'bi bi-play-fill';
+        wrapper.classList.remove('playing');
+    }
+
+
+    audio.onended = () => {
+        icon.className = 'bi bi-play-fill';
+        wrapper.classList.remove('playing');
+    };
+    }
+
+    function stopAllAudios() {
+    document.querySelectorAll('.testimonial-audio').forEach(a => {
+        a.pause();
+      
+        const btnIcon = a.closest('.player-wrapper').querySelector('.play-main-btn i');
+        btnIcon.className = 'bi bi-play-fill';
+       
+        a.closest('.player-wrapper').classList.remove('playing');
+    });
+    }
+</script>
+
 </body>
 </html>
+
+ 
