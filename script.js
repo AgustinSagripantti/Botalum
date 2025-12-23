@@ -88,5 +88,36 @@ if (video) {
         }
     }, false);
 }
+
+//MEDIDAS
+const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                const wrapper = entry.target;
+                const counter = wrapper.querySelector('.counter');
+                const target = +counter.getAttribute('data-target');
+                
+                // Animación de números
+                let count = 0;
+                const updateCount = () => {
+                    const speed = 40;
+                    const increment = target / speed;
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                wrapper.classList.add('active'); // Inicia animación del círculo CSS
+                updateCount();
+                observer.unobserve(wrapper);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.measure-circle-wrapper').forEach(w => observer.observe(w));
 });
 
