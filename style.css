@@ -673,7 +673,7 @@ hr {
     }
 }
 
-/* --- ESTILO SECCIÓN HISTORIA --- */
+/*PIONEROS*/
 
 .photo-frame-decorator {
     position: absolute;
@@ -706,12 +706,12 @@ hr {
 .z-index-2 { z-index: 2; }
 
 .nosotros-history-section {
-    padding-top: 100px !important; /* Espacio extra arriba */
+    padding-top: 100px !important; 
     padding-bottom: 80px !important;
     position: relative;
 }
 
-/* Opcional: Una sutil sombra interna en la parte superior para dar profundidad */
+
 .nosotros-history-section::before {
     content: "";
     position: absolute;
@@ -722,14 +722,14 @@ hr {
     background: linear-gradient(to bottom, rgba(0,0,0,0.03), transparent);
 }
 
-/* Ajuste para móviles */
+
 @media (max-width: 767.98px) {
     .nosotros-history-section {
         padding-top: 60px !important;
     }
 }
 
-/* Ajuste para que el badge no tape tanto en móvil */
+
 @media (max-width: 767.98px) {
     .photo-frame-decorator {
         display: none;
@@ -742,7 +742,7 @@ hr {
 }
 
 strong {
-    font-weight: 700 !important; /* El máximo grosor */
-    color: #000; /* O podés usar el azul #00478a si preferís que los nombres resalten en azul */
+    font-weight: 700 !important; 
+    color: #00478a; 
 }
 
