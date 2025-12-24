@@ -66,6 +66,11 @@ body{
     align-items: center;
 }
 
+.item-empresa{
+        border-top: 0px solid rgba(0, 0, 0, 0.2) !important; 
+    }
+
+
 #mainNav.navbar-dark .separator-line {
     border-right-color: rgba(255, 255, 255, 0.5); 
 }
@@ -155,7 +160,7 @@ body{
     font-size: 0.8em;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
 
 
     #mainNav .logo-img {
@@ -239,9 +244,11 @@ body{
     #mainNav .navbar-nav .nav-item.dropdown {
         width: 100%;
         text-align: center;  
-        border-top: 1px solid rgba(0, 0, 0, 0.2); /* Borde sutil */
+        border-top: 1px solid rgba(0, 0, 0, 0.2); 
        
     }
+
+
 
    
     #mainNav .dropdown-menu {
@@ -267,17 +274,17 @@ body{
         float: none !important;
     }
     
-    /* 8. Estilo de los elementos del menú dentro del bloque fusionado */
+    
     #mainNav .dropdown-menu .dropdown-item {
-        /* Damos padding para que se separen bien */
+        
         padding: 8px 15px;
         text-align: center;
-        /* Quitamos el hover azul que definimos en desktop */
+        
         background-color: transparent !important; 
         color: #000000 !important;
     }
     
-    /* Hover en las opciones (opcional: puedes usar un gris suave) */
+   
     #mainNav .dropdown-menu .dropdown-item:hover {
         background-color: rgba(0, 0, 0, 0.05) !important;
     }
@@ -319,6 +326,25 @@ body{
         padding: 5px 12px; 
     }
 }
+
+@media (min-width: 992px) and (max-width: 1250px) {
+    .navbar-nav .nav-link {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        font-size: 0.9rem; 
+    }
+    
+    .navbar-brand img {
+        width: 180px; 
+        height: auto;
+    }
+
+    .btn-modern {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
 
 /*BANNER*/
 .hero-section {
@@ -1279,4 +1305,103 @@ strong {
     z-index: 3;
     pointer-events: none;
 }
+
+
+/*DISTRIBUIDORES*/
+.card-distribuidor {
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+
+.card-distribuidor:hover {
+    background: rgba(0, 180, 216, 0.05);
+}
+
+.argentina-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.provincia {
+    fill: #e9ecef; 
+    stroke: #fff;  
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.provincia:hover {
+    fill: #00b4d8 !important; 
+    transform: translateY(-2px);
+}
+
+.provincia.activa {
+    fill: #00478a !important; 
+}
+
+.distribuidores-layout {
+    background-color: #f8fbff;
+    background-image: radial-gradient(#d1d9e6 0.5px, transparent 0.5px);
+    background-size: 20px 20px; 
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 71, 138, 0.05) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.blob-1 { top: -100px; right: -100px; }
+
+.blob-2 { bottom: -100px; left: -100px; }
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.map-container-premium svg {
+    filter: drop-shadow(0 20px 30px rgba(0, 43, 84, 0.15));
+    max-height: 650px;
+}
+
+.map-container-premium svg path {
+    fill: #e3e9f0 !important;
+    stroke: #ffffff !important;
+    stroke-width: 1.5;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.map-container-premium svg path:hover {
+    fill: #00b4d8 !important;
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.map-container-premium svg path.activa {
+    fill: #00478a !important;
+}
+
+.card-distribuidor {
+    background: white;
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent !important;
+}
+
+.card-distribuidor:hover {
+    transform: translateX(10px);
+    border-left-color: #00b4d8 !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+.ls-2 { letter-spacing: 2px; }
 

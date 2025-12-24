@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoColorSrc  = 'media/logo.png';
 
     const scrollThreshold = 50;
-    const mobileBreakpoint = 992; 
+    const mobileBreakpoint = 1200; 
 
     if (navbar && logoImg) {
 

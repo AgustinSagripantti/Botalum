@@ -21,21 +21,20 @@
 <body>
 <!--MENU-->
 <div id="body-overlay"></div>
-<nav class="navbar navbar-expand-lg fixed-top bg-transparent navbar-dark" id="mainNav"> 
+<nav class="navbar navbar-expand-xl fixed-top bg-transparent navbar-dark" id="mainNav"> 
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="media/logo_blanco.png" alt="Bootstrap" width="250" height="40" class="logo-img">
+        <a class="navbar-brand" href="index.html">
+            <img src="media/logo_blanco.png" alt="Botalum" width="250" height="40" class="logo-img">
         </a>
         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            
             <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="barrales.html">Barrales</a>
@@ -43,42 +42,40 @@
                 <li class="nav-item">
                     <a class="nav-link" href="testimonios.html">Testimonios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                
+                <li class="nav-item dropdown item-empresa">
+                    <a class="nav-link dropdown-toggle " href="#" id="empresaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Empresa
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="empresaDropdown">
+                        <li><a class="dropdown-item" href="nosotros.html">Nosotros</a></li>
+                        <li><a class="dropdown-item" href="distribuidores.html">Distribuidores</a></li>
+                    </ul>
                 </li>
+
                 <li class="nav-item separator-line">
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
+
                 <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle lang-selector" id="langDropdown" 
-                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        
+                    <a class="nav-link dropdown-toggle lang-selector" id="langDropdown" href="#" role="button" data-bs-toggle="dropdown">
                         <span id="currentLangDisplay">
-                           <span class="flag-icon flag-icon-ar"></span> 
-                            Español
+                           <span class="flag-icon flag-icon-ar"></span> Español
                         </span>
-                 </a>
-    
-                 <ul class="dropdown-menu" aria-labelledby="langDropdown">
-                       
-                      <li><a class="dropdown-item lang-option" data-lang="en" data-flag="gb" data-lang-name="Inglés" href="#">
-                          <span class="flag-icon flag-icon-gb me-2"></span> Inglés
-                      </a></li>
-                      <li><a class="dropdown-item lang-option" data-lang="br" data-flag="br" data-lang-name="Portugués" href="#">
-                         <span class="flag-icon flag-icon-br me-2"></span> Portugués
-                     </a></li>
-                      <li><a class="dropdown-item lang-option" data-lang="ru" data-flag="ru" data-lang-name="Ruso" href="#">
-                          <span class="flag-icon flag-icon-ru me-2"></span> Ruso
-                      </a></li>
-                  </ul>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item lang-option" data-lang="en" href="#"><span class="flag-icon flag-icon-gb me-2"></span> Inglés</a></li>
+                        <li><a class="dropdown-item lang-option" data-lang="br" href="#"><span class="flag-icon flag-icon-br me-2"></span> Portugués</a></li>
+                        <li><a class="dropdown-item lang-option" data-lang="ru" href="#"><span class="flag-icon flag-icon-ru me-2"></span> Ruso</a></li>
+                    </ul>
                 </li>
             </ul>
-  <form class="d-flex" role="search">
-                    <button class="btn btn-modern me-2" type="button">
-                        <i class="bi bi-calculator"></i> 
-                            Calculadora
-                    </button>
-                </form>
+
+            <form class="d-flex ms-lg-3" role="search">
+                <a href="calculadora.html" class="btn btn-modern">
+                    <i class="bi bi-calculator me-1"></i> Calculadora
+                </a>
+            </form>
         </div>
     </div>
 </nav>
