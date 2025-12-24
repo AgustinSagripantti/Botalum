@@ -477,6 +477,142 @@ body{
     }
 }
 
+
+#carouselBarrales {
+    background: transparent;
+    padding: 2rem 0;
+}
+
+.product-display {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; /* Evita saltos visuales */
+}
+
+.product-display img {
+    max-height: 380px;
+    width: auto !important;
+    margin: 0 auto;
+    /* La sombra mágica que sigue la forma del barral */
+    filter: drop-shadow(0 20px 30px rgba(0, 71, 138, 0.15));
+    transition: all 0.8s ease-in-out;
+}
+
+/* Efecto de suavidad extra al cambiar de slide */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 0.6s; /* Un poquito más rápido para que sea más ágil */
+    transition-property: opacity;
+    display: block !important;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Indicadores modernos (Puntitos) */
+.carousel-indicators {
+    bottom: -40px; /* Los bajamos para que no toquen el barral */
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00478a;
+    border: none;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+    opacity: 0.2;
+}
+
+.carousel-indicators .active {
+    width: 24px; /* Efecto de cápsula alargada al estar activo */
+    border-radius: 10px;
+    background-color: #00b4d8;
+    opacity: 1;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 991px) {
+    .product-display {
+        min-height: 250px;
+    }
+    .product-display img {
+        max-height: 220px;
+    }
+}
+/* --- CAROUSEL FADE FIX (SIN PARPADEO) --- */
+
+/* 1. Limpiamos el comportamiento de Bootstrap */
+.carousel-fade .carousel-item {
+    display: block !important;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Duración controlada */
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* 2. La foto activa es la única que manda */
+.carousel-fade .carousel-item.active {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+}
+
+/* 3. EL TRUCO: La foto que está saliendo debe morir al instante */
+/* Esto elimina el efecto de "encimado" */
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease-out; /* Desaparece más rápido de lo que la otra entra */
+    z-index: 1;
+}
+
+/* 4. Estética de la imagen */
+.product-display img {
+    max-height: 380px;
+    width: auto !important;
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 30px rgba(0, 71, 138, 0.15));
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Un leve zoom suave solo para dar vida, sin rebotes */
+.carousel-item.active .product-display img {
+    transform: scale(1.05);
+}
+
+/* --- AMBIENTACIÓN PROFESIONAL --- */
+
+#barrales_inicio {
+    /* Fondo con degradado sutil para que no sea blanco 'seco' */
+    background: radial-gradient(circle at 50% 50%, #f0f7ff 0%, #ffffff 70%);
+    overflow: hidden;
+}
+
+.product-display {
+    position: relative;
+    padding: 40px 0;
+    /* Creamos un 'aura' de luz detrás del barral */
+    background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
+    border-radius: 50%; /* Ayuda a que el degrade sea circular */
+}
+
+.product-display img {
+    /* Filtro para que la imagen no sea tan 'dura' */
+    filter: drop-shadow(0 15px 25px rgba(0, 71, 138, 0.1));
+    /* Degradado en los bordes de la propia imagen para que no termine de golpe */
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
 /*VIDEO*/
 .video-container {
     width: 100%;
@@ -1404,4 +1540,9 @@ strong {
 }
 
 .ls-2 { letter-spacing: 2px; }
+
+
+
+
+
 
