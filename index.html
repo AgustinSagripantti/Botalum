@@ -214,19 +214,30 @@
                 </a>
             </div>
 
-            <div class="col-md-6">
-                <div class="map-container shadow-lg rounded-4 overflow-hidden">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6694.388155956242!2d-60.67993522030424!3d-32.97228108618558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ac801f60f839%3A0x6f220360571577f0!2sUruguay%203245%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1766087476345!5m2!1ses!2sar" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+          <div class="col-md-6">
+    <div class="map-wrapper shadow-lg rounded-4 overflow-hidden border">
+        <div class="map-header-bar d-flex justify-content-center bg-light border-bottom py-2">
+            <button id="btn-arg" class="map-btn active" data-country="arg">
+                <img src="https://flagcdn.com/w40/ar.png" alt="Argentina">
+                <span>Argentina</span>
+            </button>
+            <div class="vr mx-3 my-1"></div> <button id="btn-br" class="map-btn" data-country="br">
+                <img src="https://flagcdn.com/w40/br.png" alt="Brasil">
+                <span>Brasil</span>
+            </button>
+        </div>
+
+      <div class="map-container">
+    <iframe 
+        id="map-arg" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.2195070202!2d-60.69584402344791!3d-32.94519967205423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b652df53609805%3A0xc3f982956276856a!2sUruguay%203245%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1715600000000!5m2!1ses-419!2sar" 
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+
+    <iframe id="map-br" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9215.45736977534!2d-56.03653766423405!3d-13.801613831964975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a0270062a56c35%3A0xa0789d2e235f5ab8!2sBotalum%20Brasil!5e0!3m2!1ses!2sar!4v1767652031315!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+    </div>
 
         </div>
     </div>

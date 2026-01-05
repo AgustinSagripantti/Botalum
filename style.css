@@ -1,6 +1,7 @@
 /* GENERAL */
 body{
     font-family: 'Raleway', sans-serif;
+  
 }
 
 /*MENU*/
@@ -488,22 +489,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 400px; /* Evita saltos visuales */
+    min-height: 400px; 
 }
 
 .product-display img {
     max-height: 380px;
     width: auto !important;
-    margin: 0 auto;
-    /* La sombra mágica que sigue la forma del barral */
+    margin: 0 auto;    
     filter: drop-shadow(0 20px 30px rgba(0, 71, 138, 0.15));
     transition: all 0.8s ease-in-out;
 }
 
-/* Efecto de suavidad extra al cambiar de slide */
+
 .carousel-fade .carousel-item {
     opacity: 0;
-    transition-duration: 0.6s; /* Un poquito más rápido para que sea más ágil */
+    transition-duration: 0.6s; 
     transition-property: opacity;
     display: block !important;
     position: absolute;
@@ -513,9 +513,9 @@ body{
     z-index: 0;
 }
 
-/* Indicadores modernos (Puntitos) */
+
 .carousel-indicators {
-    bottom: -40px; /* Los bajamos para que no toquen el barral */
+    bottom: -40px; 
 }
 
 .carousel-indicators [data-bs-target] {
@@ -530,13 +530,13 @@ body{
 }
 
 .carousel-indicators .active {
-    width: 24px; /* Efecto de cápsula alargada al estar activo */
+    width: 24px; 
     border-radius: 10px;
     background-color: #00b4d8;
     opacity: 1;
 }
 
-/* Responsivo para celulares */
+
 @media (max-width: 991px) {
     .product-display {
         min-height: 250px;
@@ -545,37 +545,35 @@ body{
         max-height: 220px;
     }
 }
-/* --- CAROUSEL FADE FIX (SIN PARPADEO) --- */
 
-/* 1. Limpiamos el comportamiento de Bootstrap */
+
 .carousel-fade .carousel-item {
     display: block !important;
     position: absolute;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Duración controlada */
+    transition: opacity 0.5s ease-in-out; 
     z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-/* 2. La foto activa es la única que manda */
+
 .carousel-fade .carousel-item.active {
     position: relative;
     opacity: 1;
     z-index: 2;
 }
 
-/* 3. EL TRUCO: La foto que está saliendo debe morir al instante */
-/* Esto elimina el efecto de "encimado" */
+
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
     opacity: 0 !important;
-    transition: opacity 0.2s ease-out; /* Desaparece más rápido de lo que la otra entra */
+    transition: opacity 0.2s ease-out; 
     z-index: 1;
 }
 
-/* 4. Estética de la imagen */
+
 .product-display img {
     max-height: 380px;
     width: auto !important;
@@ -584,15 +582,15 @@ body{
     transition: transform 0.6s ease-in-out;
 }
 
-/* Un leve zoom suave solo para dar vida, sin rebotes */
+
 .carousel-item.active .product-display img {
     transform: scale(1.05);
 }
 
-/* --- AMBIENTACIÓN PROFESIONAL --- */
+
 
 #barrales_inicio {
-    /* Fondo con degradado sutil para que no sea blanco 'seco' */
+
     background: radial-gradient(circle at 50% 50%, #f0f7ff 0%, #ffffff 70%);
     overflow: hidden;
 }
@@ -600,17 +598,67 @@ body{
 .product-display {
     position: relative;
     padding: 40px 0;
-    /* Creamos un 'aura' de luz detrás del barral */
+   
     background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
-    border-radius: 50%; /* Ayuda a que el degrade sea circular */
+    border-radius: 50%; 
 }
 
 .product-display img {
-    /* Filtro para que la imagen no sea tan 'dura' */
+  
     filter: drop-shadow(0 15px 25px rgba(0, 71, 138, 0.1));
-    /* Degradado en los bordes de la propia imagen para que no termine de golpe */
+  
     mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+
+
+.product-display {
+    position: relative;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    background: transparent;
+}
+
+.product-display img {
+    max-height: 380px;
+    width: auto !important;
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 30px rgba(0, 71, 138, 0.12));
+    
+  
+    mask-image: radial-gradient(
+        ellipse 90% 80% at center, 
+        black 50%, 
+        transparent 95%
+    );
+    -webkit-mask-image: radial-gradient(
+        ellipse 90% 80% at center, 
+        black 50%, 
+        transparent 95%
+    );
+    
+    transition: transform 0.8s ease-in-out;
+}
+
+.product-display::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle, 
+        rgba(0, 180, 216, 0.05) 0%, 
+        rgba(255, 255, 255, 0) 70%
+    );
+    z-index: 0;
+}
+
+.carousel-item.active .product-display img {
+    transform: scale(1.05);
 }
 
 /*VIDEO*/
@@ -676,6 +724,94 @@ body{
     }
 }
 
+.map-header-bar {
+    background-color: #f8f9fa;
+}
+
+.map-btn {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.map-btn img {
+    width: 24px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.map-btn span {
+    font-weight: 600;
+    color: #667;
+    font-size: 0.9rem;
+}
+
+.map-btn.active {
+    background-color: #e9ecef;
+}
+
+.map-btn.active span {
+    color: #00478a;
+}
+
+.map-btn:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+/* --- RESPONSIVE MAP SECTION --- */
+
+/* Contenedor principal para mantener la altura controlada */
+.map-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste de la barra de botones en móviles */
+@media (max-width: 767.98px) {
+    .map-header-bar {
+        padding: 10px 5px !important;
+    }
+
+    .map-btn {
+        padding: 5px 10px !important;
+        gap: 6px !important;
+    }
+
+    .map-btn span {
+        font-size: 0.8rem !important; /* Letra más chica para que entre todo */
+    }
+
+    .map-btn img {
+        width: 18px !important; /* Banderas más chicas */
+    }
+
+    .map-container {
+        height: 300px !important; /* Mapa más bajo en celular para que no ocupe toda la pantalla */
+    }
+}
+
+/* Para pantallas muy chicas (iPhone SE / viejos) ocultamos el texto y dejamos solo banderas */
+@media (max-width: 380px) {
+    .map-btn span {
+        display: none;
+    }
+    .map-btn {
+        padding: 10px !important;
+    }
+}
+
+/* Garantizar que el iframe siempre ocupe el 100% */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 /*FOOTER*/
 .bg-dark-blue {

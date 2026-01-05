@@ -119,6 +119,31 @@ const observer = new IntersectionObserver((entries) => {
     }, { threshold: 0.5 });
 
     document.querySelectorAll('.measure-circle-wrapper').forEach(w => observer.observe(w));
+
+    //CAMBIO DE MAPAS
+const btnArg = document.getElementById('btn-arg');
+const btnBr = document.getElementById('btn-br');
+const mapArg = document.getElementById('map-arg');
+const mapBr = document.getElementById('map-br');
+
+function updateMap(country) {
+    if (country === 'arg') {
+        mapArg.classList.remove('d-none');
+        mapBr.classList.add('d-none');
+        btnArg.classList.add('active');
+        btnBr.classList.remove('active');
+    } else {
+        mapBr.classList.remove('d-none');
+        mapArg.classList.add('d-none');
+        btnBr.classList.add('active');
+        btnArg.classList.remove('active');
+    }
+}
+
+if (btnArg && btnBr) {
+    btnArg.addEventListener('click', () => updateMap('arg'));
+    btnBr.addEventListener('click', () => updateMap('br'));
+}
 });
 
 
