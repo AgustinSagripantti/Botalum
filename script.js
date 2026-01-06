@@ -78,16 +78,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 //VIDEO
-const video = document.querySelector('.hero-video');
+const heroVideos = document.querySelectorAll('.hero-video');
+    
+    heroVideos.forEach(video => {
+        
+        video.loop = false; 
 
-if (video) {
-    video.addEventListener('timeupdate', function() {
-        if (this.currentTime >= 27) {
-            this.currentTime = 0;
-            this.play();
-        }
-    }, false);
-}
+        
+        video.addEventListener('loadedmetadata', function() {
+            video.currentTime = 3;
+            video.playbackRate = 1.5;
+        });
+
+        
+        video.addEventListener('ended', function() {
+            video.currentTime = 3; 
+            video.playbackRate = 1.5; 
+            video.play(); 
+        });
+
+        
+        video.addEventListener('playing', () => {
+            video.playbackRate = 1.5;
+        });
+    });
+
 
 //MEDIDAS
 const observer = new IntersectionObserver((entries) => {

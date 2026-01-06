@@ -100,53 +100,91 @@
 </section>
 
 <!--AUDIOS-->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row justify-content-center text-center">
+<section id="testimonios-voces" class="py-5" style="background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
-                <div class="audio-intro-icon mb-3">
-                    <i class="bi bi-mic-fill"></i>
+                <div class="audio-badge-modern mb-3">
+                    <i class="bi bi-mic-fill"></i> <span>VOCES DEL CAMPO</span>
                 </div>
-                
-                <h2 class="display-5 fw-bold text-dark-blue mb-3">La palabra de nuestros clientes</h2>
-                
-                <div class="divider-center mx-auto mb-4"></div>
-                
-                <p class="lead text-secondary px-md-5">
-                    Queremos agradecer profundamente a los productores y contratistas por compartir su experiencia.
-                </p>
-                
-                <p class="text-primary fw-bold small text-uppercase tracking-widest mt-4">
-                    <i class="bi bi-headphones me-2"></i> Haga clic en el play para escuchar los audios
-                </p>
+                <h2 class="display-5 fw-bold" style="color: #00478a;">Experiencias que hablan</h2>
             </div>
         </div>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="false">
-            
-            <div class="carousel-indicators" style="bottom: -50px;">
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-primary" aria-current="true"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-primary"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-primary"></button>
-            </div>
 
-            <div class="carousel-inner shadow-lg rounded-5">
-                
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="row g-0 testimonial-premium-card">
-                    <div class="col-md-5 position-relative overflow-hidden">
-                        <div class="img-gradient-overlay"></div> <img src="media/fundadores.png" class="img-full-card" alt="Ricardo">
-                        <div class="location-tag"><i class="bi bi-geo-alt-fill"></i> Pergamino, Bs.As.</div>
+                    <div class="modern-audio-card">
+                        
+                        
+                        <div class="modern-content">
+                            <p class="modern-quote">
+                                "Las mejoras fueron impresionantes por el ancho de labor, y el barral va muy quieto a pesar de sus 32m."
+                            </p>
+                            
+                            <div class="modern-author-box">
+                                <div class="author-avatar">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <div class="author-text">
+                                    <h5 class="mb-0">Cristian Barzanti</h5>
+                                    <span>Barral de 32m • María Grande, Entre Ríos</span>
+                                </div>
+                            </div>
+
+                            <div class="player-container-modern">
+                                <div class="player-inner">
+                                    <audio class="testimonial-audio" src="media/audio.ogg"></audio>
+                                    <button class="btn-play-modern" onclick="togglePlay(this)">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    
+                                    <div class="wave-container">
+                                        <div class="modern-bars">
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <div class="time-display">0:00 / 0:46</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                        <div class="col-md-7 p-4 p-md-5 bg-white d-flex flex-column justify-content-center">
-                            <i class="bi bi-quote text-primary opacity-25 display-1 mb-0"></i>
-                            <h3 class="fw-bold mb-1">Ricardo Rossi</h3>
-                            <p class="text-primary fw-bold mb-4">Contratista Rural</p>
-                            <p class="text-secondary fs-5 italic mb-4">"La estabilidad que ganamos con los 40 metros es impresionante, no se comparan con nada."</p>
-                            <div class="player-wrapper p-3 rounded-pill d-flex align-items-center">
-                                <audio class="testimonial-audio" src="media/audio.mp3"></audio>
-                                <button class="play-main-btn" onclick="togglePlay(this)"><i class="bi bi-play-fill"></i></button>
-                                <div class="equalizer ms-3 d-flex align-items-end">
-                                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+                 <div class="carousel-item">
+                    <div class="modern-audio-card">
+                        
+                        <div class="modern-content">
+                            <p class="modern-quote">
+                                "Mas que satisfecho con la ampliación de los botalones. Mejore mucho el peso, mas allá de que me fui a mas metros, la maquina está mas liviana"
+                            </p>
+                            
+                            <div class="modern-author-box">
+                                <div class="author-avatar">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <div class="author-text">
+                                    <h5 class="mb-0">Ariel Chartier</h5>
+                                    <span>Barral de 32m • Emilia, Santa fe</span>
+                                </div>
+                            </div>
+
+                            <div class="player-container-modern">
+                                <div class="player-inner">
+                                    <audio class="testimonial-audio" src="media/audio1.ogg"></audio>
+                                    <button class="btn-play-modern" onclick="togglePlay(this)">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    
+                                    <div class="wave-container">
+                                        <div class="modern-bars">
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <div class="time-display">0:00 / 1:15</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -154,26 +192,93 @@
                 </div>
 
                 <div class="carousel-item">
-                    <div class="row g-0 testimonial-premium-card">
-                        <div class="col-md-5 position-relative overflow-hidden">
-                            <div class="img-gradient-overlay"></div> <img src="media/fundadores.png" class="img-full-card" alt="Ricardo">
-                            <div class="location-tag"><i class="bi bi-geo-alt-fill"></i> Pergamino, Bs.As.</div>
-                        </div>
-                        <div class="col-md-7 p-4 p-md-5 bg-white d-flex flex-column justify-content-center">
-                            <i class="bi bi-quote text-primary opacity-25 display-1 mb-0"></i>
-                            <h3 class="fw-bold mb-1">Juan Garcia</h3>
-                            <p class="text-primary fw-bold mb-4">Productor Agrícola</p>
-                            <p class="text-secondary fs-5 italic mb-4">"El ahorro de combustible en una campaña de 5000 hectáreas paga la inversión sola."</p>
-                            <div class="player-wrapper p-3 rounded-pill d-flex align-items-center">
-                                <audio class="testimonial-audio" src="media/audio.mp3"></audio>
-                                <button class="play-main-btn" onclick="togglePlay(this)"><i class="bi bi-play-fill"></i></button>
-                                <div class="equalizer ms-3 d-flex align-items-end">
-                                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="modern-audio-card">
+                      
+                        
+                        <div class="modern-content">
+                            <p class="modern-quote">
+                                "En solo un mes y medio ya noto muchisimas mejoras, sobre todo en el ahorro de combustible."
+                            </p>
+                            
+                            <div class="modern-author-box">
+                                <div class="author-avatar">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <div class="author-text">
+                                    <h5 class="mb-0">Daniel Pezzini</h5>
+                                    <span>Barral de 32m • Achiras, Córdoba</span>
+                                </div>
+                            </div>
+
+                            <div class="player-container-modern">
+                                <div class="player-inner">
+                                    <audio class="testimonial-audio" src="media/audio2.ogg"></audio>
+                                    <button class="btn-play-modern" onclick="togglePlay(this)">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    
+                                    <div class="wave-container">
+                                        <div class="modern-bars">
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <div class="time-display">0:00 / 0:35</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="carousel-item">
+                    <div class="modern-audio-card">
+                       
+                        
+                        <div class="modern-content">
+                            <p class="modern-quote">
+                                "Estoy gratamente sorprendido. La máquina se comporta mucho mejor, y además de ganar metros los botalones son muy estables."
+                            </p>
+                            
+                            <div class="modern-author-box">
+                                <div class="author-avatar">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <div class="author-text">
+                                    <h5 class="mb-0">Gabriel Di Bernardo</h5>
+                                    <span>Barral de 32m • Completar</span>
+                                </div>
+                            </div>
+
+                            <div class="player-container-modern">
+                                <div class="player-inner">
+                                    <audio class="testimonial-audio" src="media/audio3.ogg"></audio>
+                                    <button class="btn-play-modern" onclick="togglePlay(this)">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    
+                                    <div class="wave-container">
+                                        <div class="modern-bars">
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <div class="time-display">0:00 / 1:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls-modern">
+                <button class="ctrl-btn-m prev" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="ctrl-btn-m next" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -419,10 +524,11 @@
 <script src="script.js"></script>
 
 <script>
-    function togglePlay(btn) {
-    const wrapper = btn.closest('.player-wrapper');
+  function togglePlay(btn) {
+    const wrapper = btn.closest('.player-inner');
     const audio = wrapper.querySelector('.testimonial-audio');
     const icon = btn.querySelector('i');
+    const timeDisplay = wrapper.querySelector('.time-display');
 
     if (audio.paused) {
         stopAllAudios();
@@ -435,26 +541,49 @@
         wrapper.classList.remove('playing');
     }
 
+    // Actualizar el tiempo en pantalla
+    audio.ontimeupdate = () => {
+        const current = formatTime(audio.currentTime);
+        const duration = formatTime(audio.duration || 0);
+        timeDisplay.innerText = `${current} / ${duration}`;
+    };
 
+    // Al terminar el audio
     audio.onended = () => {
         icon.className = 'bi bi-play-fill';
         wrapper.classList.remove('playing');
     };
-    }
+}
 
-    function stopAllAudios() {
+function stopAllAudios() {
     document.querySelectorAll('.testimonial-audio').forEach(a => {
         a.pause();
-      
-        const btnIcon = a.closest('.player-wrapper').querySelector('.play-main-btn i');
-        btnIcon.className = 'bi bi-play-fill';
-       
-        a.closest('.player-wrapper').classList.remove('playing');
+        const wrapper = a.closest('.player-inner');
+        if (wrapper) {
+            // Buscamos el nuevo botón .btn-play-modern
+            const btnIcon = wrapper.querySelector('.btn-play-modern i');
+            if (btnIcon) btnIcon.className = 'bi bi-play-fill';
+            wrapper.classList.remove('playing');
+        }
     });
-    }
+}
+
+// Función auxiliar para formatear segundos (00:00)
+function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' + sec : sec}`;
+}
+
+// Detener audios si se cambia de slide en el carrusel
+const myCarousel = document.getElementById('testimonialCarousel');
+if (myCarousel) {
+    myCarousel.addEventListener('slide.bs.carousel', () => {
+        stopAllAudios();
+    });
+}
 </script>
 
 </body>
 </html>
 
- 

@@ -764,15 +764,13 @@ body{
     background-color: #f0f0f0;
 }
 
-/* --- RESPONSIVE MAP SECTION --- */
 
-/* Contenedor principal para mantener la altura controlada */
 .map-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-/* Ajuste de la barra de botones en móviles */
+
 @media (max-width: 767.98px) {
     .map-header-bar {
         padding: 10px 5px !important;
@@ -784,19 +782,19 @@ body{
     }
 
     .map-btn span {
-        font-size: 0.8rem !important; /* Letra más chica para que entre todo */
+        font-size: 0.8rem !important; 
     }
 
     .map-btn img {
-        width: 18px !important; /* Banderas más chicas */
+        width: 18px !important; 
     }
 
     .map-container {
-        height: 300px !important; /* Mapa más bajo en celular para que no ocupe toda la pantalla */
+        height: 300px !important; 
     }
 }
 
-/* Para pantallas muy chicas (iPhone SE / viejos) ocultamos el texto y dejamos solo banderas */
+
 @media (max-width: 380px) {
     .map-btn span {
         display: none;
@@ -806,7 +804,7 @@ body{
     }
 }
 
-/* Garantizar que el iframe siempre ocupe el 100% */
+
 .map-container iframe {
     width: 100%;
     height: 100%;
@@ -1508,12 +1506,10 @@ strong {
 
 @media (max-width: 767.98px) {
     .img-gradient-overlay {
-        /* En móvil suavizamos el degradado para que no ensucie la foto */
         background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%);
     }
     
     .location-tag {
-        /* Bajamos un poco el tamaño en móviles para que no estorbe */
         bottom: 15px;
         left: 15px;
         font-size: 0.75rem;
@@ -1678,7 +1674,167 @@ strong {
 .ls-2 { letter-spacing: 2px; }
 
 
+/* NUEVA SECCIÓN AUDIOS MODERNOS */
+.audio-badge-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 71, 138, 0.1);
+    color: #00478a;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
 
+.modern-audio-card {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    overflow: hidden;
+}
 
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 5rem;
+    color: rgba(0, 71, 138, 0.05);
+}
+
+.modern-quote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.modern-author-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.author-avatar {
+    font-size: 2.5rem;
+    color: #00478a;
+}
+
+.author-text h5 {
+    color: #00478a;
+    font-weight: 700;
+}
+
+.author-text span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Player Moderno */
+.player-container-modern {
+    background: #f8f9fa;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.btn-play-modern {
+    width: 55px;
+    height: 55px;
+    background: #00478a;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn-play-modern:hover {
+    transform: scale(1.1);
+    background: #00b4d8;
+}
+
+.player-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.wave-container {
+    flex-grow: 1;
+}
+
+.modern-bars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 30px;
+}
+
+.modern-bars span {
+    width: 3px;
+    height: 6px;
+    background: #ced4da;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+/* Animación cuando suena */
+.playing .modern-bars span {
+    background: #00478a;
+    animation: waveAnim 0.8s infinite ease-in-out alternate;
+}
+
+@keyframes waveAnim {
+    from { height: 6px; }
+    to { height: 25px; }
+}
+
+/* Variar tiempos de animación para efecto natural */
+.playing .modern-bars span:nth-child(even) { animation-duration: 0.5s; }
+.playing .modern-bars span:nth-child(3n) { animation-duration: 0.9s; }
+
+.time-display {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+/* Controles del Carrusel */
+.carousel-controls-modern {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.ctrl-btn-m {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #00478a;
+    background: transparent;
+    color: #00478a;
+    transition: 0.3s;
+}
+
+.ctrl-btn-m:hover {
+    background: #00478a;
+    color: white;
+}
 
 
